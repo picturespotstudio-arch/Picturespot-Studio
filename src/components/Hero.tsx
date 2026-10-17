@@ -12,19 +12,29 @@ const HERO_SLIDES = [
     localSrc: '/photos/hero_dsc6050.jpg',
     remoteSrc: 'https://lh3.googleusercontent.com/d/1veUpQeAR3zg0FquTnKBRETj00nUL2x5M=w2000',
     title: 'The Sacred Vows Under Crimson Florals',
-    location: 'Delhi NCR'
+    location: 'Delhi NCR',
+    objectPosition: 'center 32%'
+  },
+  {
+    localSrc: '/photos/hero_1g9a1529.jpg',
+    remoteSrc: 'https://lh3.googleusercontent.com/d/1Ifc-xoBuCnBeODxWc9LvydVjaFglJx4m=w2000',
+    title: 'Imperial Vows & Golden Radiance',
+    location: 'Delhi NCR Palatial Resort',
+    objectPosition: 'center 28%'
+  },
+  {
+    localSrc: '/photos/story_dsc6469.jpg',
+    remoteSrc: 'https://lh3.googleusercontent.com/d/1UV0_Iqnr2ARySr9oZgemmTpIlXKUqHiR=w2000',
+    title: 'The Jaimala Reverie & Rose Petal Shower',
+    location: 'Delhi NCR',
+    objectPosition: 'center 35%'
   },
   {
     localSrc: '/photos/story_dsc6625.jpg',
     remoteSrc: 'https://lh3.googleusercontent.com/d/10ilaTlpqZ4bzLZzJT-FI58U3pjIvpIhG=w2000',
     title: 'Royal Mandap Silhouette & Twilight Pheras',
-    location: 'Delhi NCR'
-  },
-  {
-    localSrc: '/photos/couple_2f7a.jpg',
-    remoteSrc: 'https://lh3.googleusercontent.com/d/1kCvtrebANTqAmlGMohmSwj417sY_jSch=w2000',
-    title: 'Editorial Couple Portrait in Regal Heritage',
-    location: 'Delhi NCR'
+    location: 'Delhi NCR',
+    objectPosition: 'center 38%'
   }
 ];
 
@@ -55,6 +65,7 @@ export const Hero: React.FC<HeroProps> = ({ onViewStories, onInquireNow }) => {
               fallbackSrc={slide.remoteSrc}
               alt={slide.title}
               priority={idx === 0}
+              objectPosition={slide.objectPosition}
               className="w-full h-full object-cover brightness-[0.82] contrast-[1.05]"
             />
           </div>

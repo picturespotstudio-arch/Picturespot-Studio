@@ -16,6 +16,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onStartConversation }) => {
           src="/photos/story_dsc6469.jpg"
           fallbackSrc="https://lh3.googleusercontent.com/d/1UV0_Iqnr2ARySr9oZgemmTpIlXKUqHiR=w1800"
           alt="PictureSpot Studio Dramatic Jaimala Petal Shower"
+          objectPosition="center 30%"
           className="w-full h-full object-cover brightness-[0.6] contrast-[1.1]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0d] via-black/40 to-[#0c0c0d]/70 pointer-events-none" />

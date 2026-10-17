@@ -1,4 +1,5 @@
 import React from 'react';
+import { MapPin, Navigation, ExternalLink } from 'lucide-react';
 import { BRAND_DETAILS } from '../data/picturespot_assets.ts';
 
 interface FooterProps {
@@ -61,6 +62,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection }) => {
               </li>
               <li>
                 <button
+                  onClick={() => onNavigateSection('films')}
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  Wedding Films
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => onNavigateSection('about')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
@@ -78,12 +87,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection }) => {
             </ul>
           </div>
 
-          {/* Contact & Social Links */}
-          <div className="md:col-span-4 space-y-4">
+          {/* Contact & Social Links & Studio Address */}
+          <div className="md:col-span-4 space-y-5">
             <span className="text-[11px] tracking-[0.25em] uppercase text-[#faf9f5] block">
               Connect With Us
             </span>
-            <div className="space-y-2.5 text-xs tracking-wider">
+            <div className="space-y-3.5 text-xs tracking-wider">
               <div>
                 <span className="text-[10px] uppercase tracking-widest text-[#666] block">Phone / WhatsApp</span>
                 <a
@@ -106,6 +115,43 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection }) => {
                 </a>
               </div>
 
+              {/* Complete Studio Address with Google Maps link & Get Directions button */}
+              <div className="pt-2 border-t border-white/5 space-y-2">
+                <span className="text-[10px] uppercase tracking-widest text-[#666] flex items-center gap-1.5">
+                  <MapPin className="w-3 h-3 text-[#d6d0c4]" />
+                  Studio Address
+                </span>
+                <a
+                  href={BRAND_DETAILS.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#faf9f5] hover:text-[#d6d0c4] transition-colors leading-relaxed block text-xs font-light"
+                  title="Open in Google Maps"
+                >
+                  {BRAND_DETAILS.fullAddress}
+                </a>
+                <div className="flex items-center gap-3 pt-1">
+                  <a
+                    href={BRAND_DETAILS.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/10 hover:bg-white text-white hover:text-black text-[11px] font-medium tracking-wider uppercase transition-colors"
+                  >
+                    <Navigation className="w-3 h-3" />
+                    Get Directions
+                  </a>
+                  <a
+                    href={BRAND_DETAILS.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] text-[#99948c] hover:text-white transition-colors"
+                  >
+                    <ExternalLink className="w-3 h-3" />
+                    Google Maps
+                  </a>
+                </div>
+              </div>
+
               {/* Secondary Instagram — As requested, only as a secondary social link in the footer, NOT as a wedding service */}
               <div className="pt-2 border-t border-white/5">
                 <span className="text-[10px] uppercase tracking-widest text-[#666] block">Studio Media / Secondary</span>
@@ -117,11 +163,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection }) => {
                 >
                   {BRAND_DETAILS.secondaryInstagramHandle}
                 </a>
-              </div>
-
-              <div>
-                <span className="text-[10px] uppercase tracking-widest text-[#666] block">Studio Location</span>
-                <span className="text-[#a8a39a]">{BRAND_DETAILS.location}</span>
               </div>
             </div>
           </div>

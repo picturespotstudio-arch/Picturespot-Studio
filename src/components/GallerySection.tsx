@@ -92,6 +92,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onOpenLightbox }
                     src={img.localSrc}
                     fallbackSrc={img.remoteSrc}
                     alt={img.title}
+                    objectPosition={img.aspect === 'portrait' ? 'center 18%' : 'center 32%'}
                     className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105 brightness-95 group-hover:brightness-105"
                   />
 

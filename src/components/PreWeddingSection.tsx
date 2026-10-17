@@ -93,6 +93,7 @@ export const PreWeddingSection: React.FC<PreWeddingSectionProps> = ({
                   src={img.localSrc}
                   fallbackSrc={img.remoteSrc}
                   alt={img.title}
+                  objectPosition={img.aspect === 'portrait' ? 'center 22%' : 'center 35%'}
                   className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

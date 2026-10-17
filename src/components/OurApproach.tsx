@@ -42,6 +42,7 @@ export const OurApproach: React.FC = () => {
                 src="/photos/couple_2f7a.jpg"
                 fallbackSrc="https://lh3.googleusercontent.com/d/1kCvtrebANTqAmlGMohmSwj417sY_jSch=w1800"
                 alt="PictureSpot Studio — Editorial Wedding Couple in Regal Attire"
+                objectPosition="center 18%"
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 brightness-[0.95]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />

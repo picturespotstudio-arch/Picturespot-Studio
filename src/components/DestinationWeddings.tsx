@@ -12,28 +12,32 @@ const DESTINATION_HUBS = [
     descriptor: 'Farmhouses, Heritage Retrreats & Luxury Hotels',
     image: '/photos/hero_dsc6050.jpg',
     remoteImage: 'https://lh3.googleusercontent.com/d/1veUpQeAR3zg0FquTnKBRETj00nUL2x5M=w1400',
-    weddingsCount: '600+ Weddings'
+    weddingsCount: '600+ Weddings',
+    objectPosition: 'center 30%'
   },
   {
     name: 'JAIPUR',
     descriptor: 'Royal Palaces, Courtyards & Havelis',
     image: '/photos/couple_9105.jpg',
     remoteImage: 'https://lh3.googleusercontent.com/d/1xpjeDamJdVq0yPxS149iX7OkYXjrTYFp=w1400',
-    weddingsCount: '150+ Weddings'
+    weddingsCount: '150+ Weddings',
+    objectPosition: 'center 22%'
   },
   {
     name: 'UDAIPUR',
     descriptor: 'Lakeside Havelis & Historic Forts',
     image: '/photos/story_dsc6625.jpg',
     remoteImage: 'https://lh3.googleusercontent.com/d/10ilaTlpqZ4bzLZzJT-FI58U3pjIvpIhG=w1400',
-    weddingsCount: '90+ Weddings'
+    weddingsCount: '90+ Weddings',
+    objectPosition: 'center 35%'
   },
   {
     name: 'JIM CORBETT & HILLS',
     descriptor: 'Forest Celebrations & Mountain Backdrops',
     image: '/photos/prewed_ns2.jpg',
     remoteImage: 'https://lh3.googleusercontent.com/d/19TYk952kYnqbGxxENiMhx7x-kpUsYdJC=w1400',
-    weddingsCount: '80+ Weddings'
+    weddingsCount: '80+ Weddings',
+    objectPosition: 'center 28%'
   }
 ];
 
@@ -69,6 +73,7 @@ export const DestinationWeddings: React.FC<DestinationWeddingsProps> = ({ onInqu
                   src={hub.image}
                   fallbackSrc={hub.remoteImage}
                   alt={hub.name}
+                  objectPosition={hub.objectPosition}
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 brightness-90 group-hover:brightness-100"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />

@@ -48,6 +48,7 @@ export const FeaturedStories: React.FC<FeaturedStoriesProps> = ({ stories, onSel
                       src={story.coverImage.localSrc}
                       fallbackSrc={story.coverImage.remoteSrc}
                       alt={story.coverImage.title}
+                      objectPosition={story.coverImage.aspect === 'portrait' ? 'center 22%' : 'center 35%'}
                       className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105 brightness-[0.92] group-hover:brightness-100"
                     />
 

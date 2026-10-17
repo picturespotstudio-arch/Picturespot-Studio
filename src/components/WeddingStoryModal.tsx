@@ -85,6 +85,7 @@ export const WeddingStoryModal: React.FC<WeddingStoryModalProps> = ({
           fallbackSrc={coverImage.remoteSrc}
           alt={coverImage.title}
           priority
+          objectPosition={coverImage.aspect === 'portrait' ? 'center 20%' : 'center 32%'}
           className="absolute inset-0 w-full h-full object-cover brightness-[0.8] contrast-[1.05]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0d] via-[#0c0c0d]/30 to-black/30" />
@@ -156,6 +157,7 @@ export const WeddingStoryModal: React.FC<WeddingStoryModalProps> = ({
                     src={img.localSrc}
                     fallbackSrc={img.remoteSrc}
                     alt={img.title}
+                    objectPosition={img.aspect === 'portrait' ? 'center 20%' : 'center 35%'}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
@@ -180,6 +182,7 @@ export const WeddingStoryModal: React.FC<WeddingStoryModalProps> = ({
               src={fullWidthHero2.localSrc}
               fallbackSrc={fullWidthHero2.remoteSrc}
               alt={fullWidthHero2.title}
+              objectPosition="center 30%"
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-103"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0d] via-transparent to-transparent opacity-80" />
@@ -227,6 +230,7 @@ export const WeddingStoryModal: React.FC<WeddingStoryModalProps> = ({
                     src={img.localSrc}
                     fallbackSrc={img.remoteSrc}
                     alt={img.title}
+                    objectPosition="center 18%"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
@@ -263,6 +267,7 @@ export const WeddingStoryModal: React.FC<WeddingStoryModalProps> = ({
                     src={img.localSrc}
                     fallbackSrc={img.remoteSrc}
                     alt={img.title}
+                    objectPosition="center 24%"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
@@ -286,6 +291,7 @@ export const WeddingStoryModal: React.FC<WeddingStoryModalProps> = ({
             src={closingImage.localSrc}
             fallbackSrc={closingImage.remoteSrc}
             alt={closingImage.title}
+            objectPosition={closingImage.aspect === 'portrait' ? 'center 22%' : 'center 32%'}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
           />
         </div>

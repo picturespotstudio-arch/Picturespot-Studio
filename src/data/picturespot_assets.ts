@@ -36,13 +36,18 @@ export interface WeddingStory {
 
 export interface WeddingFilm {
   id: string;
+  driveId: string;
   title: string;
   coupleNames: string;
   location: string;
   duration: string;
-  thumbnail: PictureSpotImage;
+  thumbnailSrc: string;
+  remoteThumbnailSrc: string;
+  embedUrl: string;
+  directWatchUrl: string;
   description: string;
   directorNotes: string;
+  category?: 'teaser' | 'highlight' | 'haldi' | 'reel';
 }
 
 export interface Testimonial {
@@ -647,6 +652,98 @@ export const PICTURESPOT_IMAGES: PictureSpotImage[] = [
     location: 'Aravalli Hills',
     storyId: 'story-rohan-tanya',
     caption: 'Golden lens flare softening the final frame of the pre-wedding shoot.'
+  },
+  // Newly Added Photographs from Updated Google Drive Library
+  {
+    id: 'img-hero-1g9a',
+    driveId: '1Ifc-xoBuCnBeODxWc9LvydVjaFglJx4m',
+    filename: 'hero_1g9a1529.jpg',
+    localSrc: '/photos/hero_1g9a1529.jpg',
+    remoteSrc: 'https://lh3.googleusercontent.com/d/1Ifc-xoBuCnBeODxWc9LvydVjaFglJx4m=w1800',
+    title: 'Imperial Vows & Golden Radiance',
+    category: 'story',
+    aspect: 'landscape',
+    location: 'Delhi NCR Palatial Resort',
+    storyId: 'story-arjun-meher',
+    caption: 'A magnificent landscape composition showcasing bride and groom in complete ceremonial splendor.'
+  },
+  {
+    id: 'img-couple-8636',
+    driveId: '1Y6MeGy2kvq4-KXPRVEBmDcgbClV4_lpr',
+    filename: 'couple_0r3a8636.jpg',
+    localSrc: '/photos/couple_0r3a8636.jpg',
+    remoteSrc: 'https://lh3.googleusercontent.com/d/1Y6MeGy2kvq4-KXPRVEBmDcgbClV4_lpr=w1800',
+    title: 'The Sovereign Couple in Bespoke Regalia',
+    category: 'couple',
+    aspect: 'portrait',
+    location: 'Delhi NCR Heritage Pavilion',
+    storyId: 'story-dev-simran',
+    caption: 'Impeccable balance of bespoke heritage couture and serene, natural poise.'
+  },
+  {
+    id: 'img-ceremony-9801',
+    driveId: '190K-2MtDEtE-Adjb84OhOLJ8vAVI9ZyG',
+    filename: 'ceremony_0r3a9801.jpg',
+    localSrc: '/photos/ceremony_0r3a9801.jpg',
+    remoteSrc: 'https://lh3.googleusercontent.com/d/190K-2MtDEtE-Adjb84OhOLJ8vAVI9ZyG=w1800',
+    title: 'The Sacred Havan & Ancient Vedic Chant',
+    category: 'ceremony',
+    aspect: 'portrait',
+    location: 'Delhi NCR',
+    storyId: 'story-arjun-meher',
+    caption: 'Warm smoke and golden firelight blessing the couple during twilight rituals.'
+  },
+  {
+    id: 'img-portrait-8612',
+    driveId: '1dcQAkXgqBgYC2uJVDDqWv4qZ2_bbHHXl',
+    filename: 'portrait_0r3a8612.jpg',
+    localSrc: '/photos/portrait_0r3a8612.jpg',
+    remoteSrc: 'https://lh3.googleusercontent.com/d/1dcQAkXgqBgYC2uJVDDqWv4qZ2_bbHHXl=w1800',
+    title: 'Aristocratic Poise & Antique Zardozi',
+    category: 'bridal',
+    aspect: 'portrait',
+    location: 'Delhi NCR Heritage Estate',
+    storyId: 'story-dev-simran',
+    caption: 'Rich hand-embroidery, uncut polki jewels, and dignified grace in soft window light.'
+  },
+  {
+    id: 'img-candid-3330',
+    driveId: '1Xq368TMb8rxKaQos_k-4g5i0fyYsUF1e',
+    filename: 'candid_o0a3330.jpg',
+    localSrc: '/photos/candid_o0a3330.jpg',
+    remoteSrc: 'https://lh3.googleusercontent.com/d/1Xq368TMb8rxKaQos_k-4g5i0fyYsUF1e=w1800',
+    title: 'Spontaneous Laughter & Family Merriment',
+    category: 'candid',
+    aspect: 'portrait',
+    location: 'Delhi NCR',
+    storyId: 'story-kabir-rhea',
+    caption: 'Unscripted delight capturing the vibrant pulse and shared joy of celebration.'
+  },
+  {
+    id: 'img-ceremony-2491',
+    driveId: '1qNDgEuJ9xW0BHq5r5TI75IjeVGvetY-D',
+    filename: 'ceremony_0r3a2491.jpg',
+    localSrc: '/photos/ceremony_0r3a2491.jpg',
+    remoteSrc: 'https://lh3.googleusercontent.com/d/1qNDgEuJ9xW0BHq5r5TI75IjeVGvetY-D=w1800',
+    title: 'The Sacred Knot & Eternal Union',
+    category: 'ceremony',
+    aspect: 'portrait',
+    location: 'Delhi NCR',
+    storyId: 'story-arjun-meher',
+    caption: 'Tying the auspicious gathbandhan as families unite around the holy agni.'
+  },
+  {
+    id: 'img-couple-3758-alt',
+    driveId: '1vMRvL8U8IK-7NdIFNnblgG9_10s5tSYC',
+    filename: 'couple_0r3a3758_alt.jpg',
+    localSrc: '/photos/couple_0r3a3758_alt.jpg',
+    remoteSrc: 'https://lh3.googleusercontent.com/d/1vMRvL8U8IK-7NdIFNnblgG9_10s5tSYC=w1800',
+    title: 'Twilight Whispers Along the Palace Balcony',
+    category: 'couple',
+    aspect: 'portrait',
+    location: 'Delhi NCR',
+    storyId: 'story-kabir-rhea',
+    caption: 'Intimate closeness as dusk gently settles over the palace courtyard.'
   }
 ];
 
@@ -795,47 +892,142 @@ export const WEDDING_STORIES: WeddingStory[] = [
   }
 ];
 
-// Curated Wedding Films by PictureSpot Studio
+// Curated Real Wedding Films by PictureSpot Studio from Drive folder
 export const WEDDING_FILMS: WeddingFilm[] = [
   {
-    id: 'film-1',
-    title: 'The Sacred Crimson',
-    coupleNames: 'Arjun & Meher',
-    location: 'Delhi NCR',
-    duration: '04:42',
-    thumbnail: PICTURESPOT_IMAGES[0],
-    description: 'A cinematic wedding film capturing the intense reverence of dusk pheras, royal torchlight arrivals, and the tears of a joyous union.',
-    directorNotes: 'Filmed on full-frame cinema cameras with anamorphic lenses to capture the authentic warmth of the sacred mandap.'
+    id: 'film-final-highlight',
+    driveId: '1YLFG8ApNSornY_JC25ChFtteFiUi_3Ck',
+    title: 'PictureSpot Studio — Grand Wedding Highlights Film',
+    coupleNames: 'PictureSpot Signature Cinema',
+    location: 'Delhi NCR & Destination Weddings',
+    duration: '05:40',
+    thumbnailSrc: '/videos/final_highlight.jpg',
+    remoteThumbnailSrc: 'https://lh3.googleusercontent.com/d/1YLFG8ApNSornY_JC25ChFtteFiUi_3Ck=w1200',
+    embedUrl: 'https://drive.google.com/file/d/1YLFG8ApNSornY_JC25ChFtteFiUi_3Ck/preview',
+    directWatchUrl: 'https://drive.google.com/file/d/1YLFG8ApNSornY_JC25ChFtteFiUi_3Ck/view?usp=sharing',
+    description: 'A comprehensive visual tapestry uniting royal courtyard vows, sacred pheras, heartfelt tears, and eternal celebrations.',
+    directorNotes: 'The defining showcase of PictureSpot Studio’s cinematic wedding cinematography ethos.',
+    category: 'highlight'
   },
   {
-    id: 'film-2',
-    title: 'Echoes in Stone & Light',
-    coupleNames: 'Kabir & Rhea',
+    id: 'film-bhaskar-kinjal',
+    driveId: '1ZkRiDgS5SNdbc83-_Gc8p3aBVd__tdGd',
+    title: 'Bhaskar & Kinjal — Official Wedding Teaser',
+    coupleNames: 'Bhaskar & Kinjal',
     location: 'Delhi NCR Heritage Pavilion',
-    duration: '05:18',
-    thumbnail: PICTURESPOT_IMAGES[2],
-    description: 'A poetic celebration of heritage architecture, gentle courtyard breezes, and the unspoken chemistry between two best friends.',
-    directorNotes: 'Graded with rich film grain and natural warm tones honoring the historic stone monuments.'
+    duration: '02:45',
+    thumbnailSrc: '/videos/bhaskar_kinjal.jpg',
+    remoteThumbnailSrc: 'https://lh3.googleusercontent.com/d/1ZkRiDgS5SNdbc83-_Gc8p3aBVd__tdGd=w1200',
+    embedUrl: 'https://drive.google.com/file/d/1ZkRiDgS5SNdbc83-_Gc8p3aBVd__tdGd/preview',
+    directWatchUrl: 'https://drive.google.com/file/d/1ZkRiDgS5SNdbc83-_Gc8p3aBVd__tdGd/view?usp=sharing',
+    description: 'High-energy celebration, emotional vows, and unforgettable moments between two souls uniting.',
+    directorNotes: 'Captured with slow-motion b-roll, natural ambient acoustics, and high-energy music synchronization.',
+    category: 'teaser'
   },
   {
-    id: 'film-3',
-    title: 'Written in Royal Red',
-    coupleNames: 'Dev & Simran',
-    location: 'Delhi NCR & Jaipur',
-    duration: '06:12',
-    thumbnail: PICTURESPOT_IMAGES[12],
-    description: 'The regal weight of Rajputana heritage merged with modern love. An expansive visual symphony of colour, heritage music, and devotion.',
-    directorNotes: 'Features original audio recorded live during the Vedic mantras, scored to classical strings.'
+    id: 'film-deepam',
+    driveId: '1WvVYuG9ZpfAi8-vv3zywwMYSTsblRRJm',
+    title: 'Deepam Ladhani — Royal Wedding Celebration',
+    coupleNames: 'Deepam & Partner',
+    location: 'Delhi NCR Palatial Resort',
+    duration: '04:22',
+    thumbnailSrc: '/videos/deepam_ladhani.jpg',
+    remoteThumbnailSrc: 'https://lh3.googleusercontent.com/d/1WvVYuG9ZpfAi8-vv3zywwMYSTsblRRJm=w1200',
+    embedUrl: 'https://drive.google.com/file/d/1WvVYuG9ZpfAi8-vv3zywwMYSTsblRRJm/preview',
+    directWatchUrl: 'https://drive.google.com/file/d/1WvVYuG9ZpfAi8-vv3zywwMYSTsblRRJm/view?usp=sharing',
+    description: 'An expansive cinematic wedding film documenting regal courtyard vows, sacred havan, and joyous family celebrations.',
+    directorNotes: 'Mastered on full-frame cinema optics with bespoke color grading honoring rich crimson and antique gold tones.',
+    category: 'highlight'
   },
   {
-    id: 'film-4',
-    title: 'Before the Wedding Was You',
-    coupleNames: 'Rohan & Tanya',
-    location: 'Aravalli Hills & NCR',
-    duration: '04:15',
-    thumbnail: PICTURESPOT_IMAGES[27],
-    description: 'A cinematic pre-wedding narrative film tracing unhurried moments, open horizon winds, and honest laughter before the wedding day.',
-    directorNotes: 'Documentary approach using ambient nature sounds and intimate handheld framing.'
+    id: 'film-rohit',
+    driveId: '1A2-ZS0Houuv-3oAcRuMWP1B3CZuYB48Q',
+    title: 'Rohit & Partner — The Celebration Teaser',
+    coupleNames: 'Rohit & Partner',
+    location: 'Delhi NCR Heritage Retreat',
+    duration: '03:05',
+    thumbnailSrc: '/videos/rohit_teaser.jpg',
+    remoteThumbnailSrc: 'https://lh3.googleusercontent.com/d/1A2-ZS0Houuv-3oAcRuMWP1B3CZuYB48Q=w1200',
+    embedUrl: 'https://drive.google.com/file/d/1A2-ZS0Houuv-3oAcRuMWP1B3CZuYB48Q/preview',
+    directWatchUrl: 'https://drive.google.com/file/d/1A2-ZS0Houuv-3oAcRuMWP1B3CZuYB48Q/view?usp=sharing',
+    description: 'Electric baraat energy, sparkling chandeliers, and the solemn stillness of sacred pheras.',
+    directorNotes: 'Dynamic camera movement paired with crisp prime lens bokeh.',
+    category: 'teaser'
+  },
+  {
+    id: 'film-aayushi',
+    driveId: '1KMNzWXDggj6CAwElu3HBFy4mZ0zJvpqQ',
+    title: 'Aayushi & Partner — Royal Wedding Teaser',
+    coupleNames: 'Aayushi & Partner',
+    location: 'Delhi NCR Palatial Grounds',
+    duration: '03:15',
+    thumbnailSrc: '/videos/aayushi_teaser.jpg',
+    remoteThumbnailSrc: 'https://lh3.googleusercontent.com/d/1KMNzWXDggj6CAwElu3HBFy4mZ0zJvpqQ=w1200',
+    embedUrl: 'https://drive.google.com/file/d/1KMNzWXDggj6CAwElu3HBFy4mZ0zJvpqQ/preview',
+    directWatchUrl: 'https://drive.google.com/file/d/1KMNzWXDggj6CAwElu3HBFy4mZ0zJvpqQ/view?usp=sharing',
+    description: 'The regal weight of bridal entrance under phoolon ki chaadar, Vedic rituals, and joyful dancing.',
+    directorNotes: 'Fine art portraiture lighting blended with documentary agility.',
+    category: 'teaser'
+  },
+  {
+    id: 'film-sujay',
+    driveId: '1lBsk1sVM9G3vdzLDjNdT9AAJWsBlov-Q',
+    title: 'Sujay & Partner — Cinematic Wedding Teaser',
+    coupleNames: 'Sujay & Partner',
+    location: 'Delhi NCR & Rajasthan Destination',
+    duration: '02:58',
+    thumbnailSrc: '/videos/sujay_teaser.jpg',
+    remoteThumbnailSrc: 'https://lh3.googleusercontent.com/d/1lBsk1sVM9G3vdzLDjNdT9AAJWsBlov-Q=w1200',
+    embedUrl: 'https://drive.google.com/file/d/1lBsk1sVM9G3vdzLDjNdT9AAJWsBlov-Q/preview',
+    directWatchUrl: 'https://drive.google.com/file/d/1lBsk1sVM9G3vdzLDjNdT9AAJWsBlov-Q/view?usp=sharing',
+    description: 'A poetic celebration of heritage architecture, gentle evening breezes, and profound family blessings.',
+    directorNotes: 'Scored with live acoustic instrumentation and warm cinematic film stock emulation.',
+    category: 'teaser'
+  },
+  {
+    id: 'film-teaser-01',
+    driveId: '1XC95EMoA8BFfIitQb-J1ZQUUGyQw5zwn',
+    title: 'PictureSpot Studio — Signature Film Teaser 01',
+    coupleNames: 'PictureSpot Cinema',
+    location: 'Delhi NCR & Rajasthan',
+    duration: '02:30',
+    thumbnailSrc: '/videos/teaser_01.jpg',
+    remoteThumbnailSrc: 'https://lh3.googleusercontent.com/d/1XC95EMoA8BFfIitQb-J1ZQUUGyQw5zwn=w1200',
+    embedUrl: 'https://drive.google.com/file/d/1XC95EMoA8BFfIitQb-J1ZQUUGyQw5zwn/preview',
+    directWatchUrl: 'https://drive.google.com/file/d/1XC95EMoA8BFfIitQb-J1ZQUUGyQw5zwn/view?usp=sharing',
+    description: 'Atmospheric teaser capturing the prelude, nervous excitement, and majestic union of the wedding day.',
+    directorNotes: 'Subtle sound design layering whispering mantras over orchestral strings.',
+    category: 'teaser'
+  },
+  {
+    id: 'film-haldi',
+    driveId: '1wlFbs8tOwWOVY4bm-BqyokPpFt6F2ypY',
+    title: 'Haldi Celebrations & Pure Joy — Cinematic Short',
+    coupleNames: 'Haldi Celebrations',
+    location: 'Delhi NCR Countryside',
+    duration: '01:50',
+    thumbnailSrc: '/videos/haldi_teaser.jpg',
+    remoteThumbnailSrc: 'https://lh3.googleusercontent.com/d/1wlFbs8tOwWOVY4bm-BqyokPpFt6F2ypY=w1200',
+    embedUrl: 'https://drive.google.com/file/d/1wlFbs8tOwWOVY4bm-BqyokPpFt6F2ypY/preview',
+    directWatchUrl: 'https://drive.google.com/file/d/1wlFbs8tOwWOVY4bm-BqyokPpFt6F2ypY/view?usp=sharing',
+    description: 'Yellow turmeric splashes, marigold showers, and uncontrollable family laughter caught in vivid detail.',
+    directorNotes: 'High frame-rate capture celebrating dynamic color and spontaneous playfulness.',
+    category: 'haldi'
+  },
+  {
+    id: 'film-nikhil-reel',
+    driveId: '1wG4ov21QusKFMTJvuP-HoAfEp4y-JAIw',
+    title: 'Nikhil & Partner — Vertical Wedding Cinema Reel',
+    coupleNames: 'Nikhil & Partner',
+    location: 'Delhi NCR',
+    duration: '01:15',
+    thumbnailSrc: '/videos/nikhil_reel.jpg',
+    remoteThumbnailSrc: 'https://lh3.googleusercontent.com/d/1wG4ov21QusKFMTJvuP-HoAfEp4y-JAIw=w1200',
+    embedUrl: 'https://drive.google.com/file/d/1wG4ov21QusKFMTJvuP-HoAfEp4y-JAIw/preview',
+    directWatchUrl: 'https://drive.google.com/file/d/1wG4ov21QusKFMTJvuP-HoAfEp4y-JAIw/view?usp=sharing',
+    description: 'A vertical cinematic reel optimized for modern digital screens and luxury storytelling.',
+    directorNotes: 'Crafted specifically in portrait format for mobile viewing with sharp editorial cuts.',
+    category: 'reel'
   }
 ];
 
@@ -882,6 +1074,9 @@ export const BRAND_DETAILS = {
   established: 2015,
   weddingsCovered: '1000+',
   location: 'Delhi NCR, India',
+  fullAddress: '5th floor, B-99, Panchsheel Vihar, Sheikh Sarai Phase 1, Malviya Nagar, New Delhi, Delhi 110017',
+  shortAddress: 'Malviya Nagar, New Delhi, Delhi 110017',
+  googleMapsUrl: 'https://share.google/hhY6wnNDc1LehMWiw',
   availability: 'Available across Delhi NCR, India & Global Destination Weddings',
   phone: '+91 97110 66988',
   phoneClean: '+919711066988',
@@ -890,5 +1085,6 @@ export const BRAND_DETAILS = {
   instagramUrl: 'https://instagram.com/picturespot.studio',
   secondaryInstagramHandle: '@picturespotpodcast.studio',
   secondaryInstagramUrl: 'https://instagram.com/picturespotpodcast.studio',
-  googleDriveUrl: 'https://drive.google.com/drive/folders/1K7p8cOF03yNbdZmxNwsazeuSZ2Re9Q9C?usp=drive_link'
+  googleDrivePhotosUrl: 'https://drive.google.com/drive/folders/1K7p8cOF03yNbdZmxNwsazeuSZ2Re9Q9C?usp=drive_link',
+  googleDriveVideosUrl: 'https://drive.google.com/drive/folders/13o-boj78Vw374J7JblsgK7SAl8cnUXzU?usp=drive_link'
 };

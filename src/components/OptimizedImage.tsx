@@ -5,6 +5,8 @@ interface OptimizedImageProps extends React.ImgHTMLAttributes<HTMLImageElement> 
   fallbackSrc?: string;
   alt: string;
   className?: string;
+  imgClassName?: string;
+  objectPosition?: string;
   priority?: boolean;
 }
 
@@ -13,6 +15,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   fallbackSrc,
   alt,
   className = '',
+  imgClassName = '',
+  objectPosition,
   priority = false,
   ...props
 }) => {
@@ -44,9 +48,10 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
           referrerPolicy="no-referrer"
           onLoad={() => setIsLoaded(true)}
           onError={handleError}
-          className={`w-full h-full object-cover transition-opacity duration-700 ease-out ${
+          className={`w-full h-full object-cover transition-opacity duration-700 ease-out ${imgClassName} ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
+          style={objectPosition ? { objectPosition, ...props.style } : props.style}
           {...props}
         />
       ) : (
